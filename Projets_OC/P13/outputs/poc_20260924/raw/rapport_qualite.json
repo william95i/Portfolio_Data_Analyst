@@ -1,0 +1,208 @@
+{
+  "project": "POC P13 — Bottleneck",
+  "correction_profile": "raw",
+  "executed_at_utc": "2026-09-24T14:41:44.227363+00:00",
+  "input_files": [
+    "erp.xlsx",
+    "liaison.xlsx",
+    "web.xlsx"
+  ],
+  "steps": {
+    "web_non_product_rows": 797,
+    "web_product_rows_missing_sku": 2,
+    "web_all_rows_missing_sku": 85,
+    "web_duplicate_sku_rows": 0,
+    "web_duplicate_sku_rows_removed_keep_first": 0,
+    "web_sku_corrections_to_join_key": {},
+    "web_sku_corrections_to_output_label": {},
+    "liaison_id_web_corrections_to_join_key": {},
+    "liaison_id_web_corrections_to_output_label": {},
+    "erp_without_liaison": 0,
+    "liaison_rows_missing_id_web": 91,
+    "joined_rows_without_web_match": 111,
+    "matched_product_rows": 714,
+    "historical_margin_filter_rows_kept": 713,
+    "historical_margin_filter_rows_removed": 1,
+    "historical_margin_filter_skus_removed": [
+      "12589"
+    ]
+  },
+  "profiles": [
+    {
+      "table": "erp_source",
+      "rows": 825,
+      "columns": 6,
+      "duplicate_rows": 0,
+      "missing_by_column": {}
+    },
+    {
+      "table": "liaison_source",
+      "rows": 825,
+      "columns": 2,
+      "duplicate_rows": 0,
+      "missing_by_column": {
+        "id_web": 91
+      }
+    },
+    {
+      "table": "web_source",
+      "rows": 1513,
+      "columns": 29,
+      "duplicate_rows": 82,
+      "missing_by_column": {
+        "sku": 85,
+        "average_rating": 83,
+        "total_sales": 83,
+        "tax_status": 797,
+        "tax_class": 1513,
+        "post_author": 83,
+        "post_date": 83,
+        "post_date_gmt": 83,
+        "post_content": 1513,
+        "product_type": 84,
+        "post_title": 83,
+        "post_excerpt": 797,
+        "post_status": 83,
+        "comment_status": 83,
+        "ping_status": 83,
+        "post_password": 1513,
+        "post_name": 83,
+        "post_modified": 83,
+        "post_modified_gmt": 83,
+        "post_content_filtered": 1513,
+        "post_parent": 83,
+        "guid": 83,
+        "menu_order": 83,
+        "post_type": 83,
+        "post_mime_type": 799,
+        "comment_count": 83
+      }
+    },
+    {
+      "table": "erp_liaison",
+      "rows": 825,
+      "columns": 11,
+      "duplicate_rows": 0,
+      "missing_by_column": {
+        "id_web": 91,
+        "id_web_source": 91,
+        "_join_sku": 91
+      }
+    },
+    {
+      "table": "jointure_produits",
+      "rows": 714,
+      "columns": 51,
+      "duplicate_rows": 0,
+      "missing_by_column": {
+        "tax_class": 714,
+        "post_content": 714,
+        "product_type": 1,
+        "post_password": 714,
+        "post_content_filtered": 714,
+        "post_mime_type": 714,
+        "mois_stock": 25
+      }
+    },
+    {
+      "table": "anomalies",
+      "rows": 40,
+      "columns": 5,
+      "duplicate_rows": 0,
+      "missing_by_column": {}
+    }
+  ],
+  "checks": [
+    {
+      "check": "unicité product_id (ERP)",
+      "status": "OK",
+      "rows_flagged": 0,
+      "detail": "Une clé répétée peut multiplier les lignes à la jointure."
+    },
+    {
+      "check": "unicité product_id (liaison)",
+      "status": "OK",
+      "rows_flagged": 0,
+      "detail": "Une clé répétée peut multiplier les lignes à la jointure."
+    },
+    {
+      "check": "filtrage des lignes Web",
+      "status": "Information",
+      "rows_flagged": 797,
+      "detail": "Lignes écartées car post_type n'est pas 'product', comme dans le notebook P6."
+    },
+    {
+      "check": "SKU Web manquants parmi les produits",
+      "status": "À examiner",
+      "rows_flagged": 2,
+      "detail": "Lignes laissées hors rapprochement produit; elles ne sont pas supprimées des sources."
+    },
+    {
+      "check": "SKU Web répétés",
+      "status": "OK",
+      "rows_flagged": 0,
+      "detail": "Pour reproduire le P6, première occurrence conservée; 0 ligne(s) non retenue(s)."
+    },
+    {
+      "check": "SKU Web manquants toutes lignes confondues",
+      "status": "Information",
+      "rows_flagged": 85,
+      "detail": "Ce compte inclut les lignes de pièces jointes et autres types Web; il est distinct des produits sans SKU."
+    },
+    {
+      "check": "prix ERP négatifs (source complète)",
+      "status": "À examiner",
+      "rows_flagged": 3,
+      "detail": "Valeurs signalées sur la source ERP entière, y compris les produits non rapprochés."
+    },
+    {
+      "check": "stock ERP négatif (source complète)",
+      "status": "À examiner",
+      "rows_flagged": 2,
+      "detail": "Valeurs conservées; leur sens métier n'est pas présumé."
+    },
+    {
+      "check": "ventes Web négatives (source complète)",
+      "status": "À examiner",
+      "rows_flagged": 2,
+      "detail": "Valeurs signalées sur la source Web entière, même si la ligne ne rejoint aucun produit ERP."
+    },
+    {
+      "check": "lignes ERP sans correspondance dans liaison",
+      "status": "OK",
+      "rows_flagged": 0,
+      "detail": "Jointure ERP–liaison conservée en left join pour rendre les absences visibles."
+    },
+    {
+      "check": "identifiants Web manquants dans liaison",
+      "status": "À examiner",
+      "rows_flagged": 91,
+      "detail": "product_id peut exister dans liaison alors que id_web est vide; ces cas empêchent le rapprochement Web."
+    },
+    {
+      "check": "lignes ERP/liaison sans correspondance Web",
+      "status": "À examiner",
+      "rows_flagged": 111,
+      "detail": "Lignes non appariées exclues du jeu produit apparié, comptées dans ce rapport."
+    },
+    {
+      "check": "marges négatives",
+      "status": "À examiner",
+      "rows_flagged": 1,
+      "detail": "Le POC conserve ces produits dans la sortie d'analyse et compare séparément le filtre historique taux_marge > 0."
+    },
+    {
+      "check": "écart stock_status / statut calculé",
+      "status": "À examiner",
+      "rows_flagged": 3,
+      "detail": "Statut calculé comme dans le contrôle P6 : stock nul => outofstock, sinon instock."
+    }
+  ],
+  "limitations": [
+    "La signification métier des prix, ventes et stocks négatifs n'est pas validée.",
+    "Le filtre historique taux_marge > 0 est reproduit uniquement pour comparaison.",
+    "Le contrôle z-score est une alerte exploratoire; il ne décide pas si un prix est erroné.",
+    "La source de liaison utilisée est liaison.xlsx; sa copie fournie a les mêmes valeurs.",
+    "Les règles n'ont été évaluées que sur les classeurs fournis."
+  ]
+}

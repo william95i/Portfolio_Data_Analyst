@@ -1,0 +1,14 @@
+name: oc_sociodemographie
+version: '1.2.0'
+config-version: 2
+
+profile: default
+
+model-paths: ['models']
+test-paths: ['tests']
+
+models:
+  oc_sociodemographie:
+    +materialized: view
+    marts:
+      +materialized: table

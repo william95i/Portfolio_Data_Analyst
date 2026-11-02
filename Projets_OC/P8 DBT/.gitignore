@@ -1,0 +1,7 @@
+# Export pédagogique brut : les USER_ID sont fictifs, mais ce fichier reste hors de la sélection portfolio.
+DATASET*.csv
+# Livrables historiques avec tableaux détaillés et métriques antérieures aux corrections.
+Atitso_William_1_donnéescsv_062026.csv
+P8.xlsx
+Atitso_William_2_Présentation_062026.pptx
+Atitso_William_3_Workflow_DBT_062026.zip

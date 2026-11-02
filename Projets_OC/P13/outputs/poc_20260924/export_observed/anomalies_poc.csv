@@ -1,0 +1,41 @@
+﻿rule,sku,column,value_observed,action
+stock négatif,14736,stock_quantity,-1.0,À examiner; aucune correction automatique
+marge négative,12589,taux_marge,-634.98814229249,À examiner; aucune correction automatique
+mois de stock non calculable,15300,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,14980,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,14977,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,16045,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,16030,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,15022,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,13078,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,13416,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,15341,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,13032,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,16322,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,4679,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,12589,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,9636,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,15149,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,14372,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,16289,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,15928,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,14149,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,14828,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,13557,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,14241,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,523,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,15318,total_sales,0.0,À examiner; aucune correction automatique
+mois de stock non calculable,15745,total_sales,0.0,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,15940,z_score,6.981591379606068,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,3510,z_score,5.205993113297554,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,7819,z_score,4.517495826361599,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,14220,z_score,3.7927618401132257,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,14581,z_score,6.709816134762928,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,14915,z_score,3.350674108501718,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,15185,z_score,5.169756413985135,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,14983,z_score,5.760414612777559,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,14775,z_score,3.249211350426946,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,14923,z_score,3.7202884414883886,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,15126,z_score,3.0462858342774015,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,15072,z_score,3.212974651114527,À examiner; aucune correction automatique
+prix à plus de 3 écarts-types,15070,z_score,3.212974651114527,À examiner; aucune correction automatique

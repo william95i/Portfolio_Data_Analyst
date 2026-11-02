@@ -1,0 +1,22 @@
+# Archives de travail et contexte privé
+/Projets_OC/P13_Partie2_Portfolio_Codex.zip
+/Projets_OC/P8 DBT/Atitso_William_3_Workflow_DBT_062026.zip
+/Projets_OC/P5 SQL/dumps/
+
+# Source modifiable du PDF, conservée localement
+/Projets_OC/P13/output/pdf/Documentation_P13_Missions_1_2_source.docx
+
+# Fichiers temporaires
+/tmp/
+**/__pycache__/
+**/.ipynb_checkpoints/
+*.pyc
+~$*.docx
+
+# P13 : garder les rapports et alertes utiles, écarter les tables générées
+/Projets_OC/P13/attendus_p13.md
+/Projets_OC/P13/outputs/notebook_p13/
+/Projets_OC/P13/outputs/notebook_p6_historique/
+/Projets_OC/P13/outputs/poc_20260924/*/jointure_poc.csv
+/Projets_OC/P13/outputs/poc_20260924/*/df_clean_historique_poc.csv
+/Projets_OC/P13/outputs/poc_20260924/raw/anomalies_poc.csv

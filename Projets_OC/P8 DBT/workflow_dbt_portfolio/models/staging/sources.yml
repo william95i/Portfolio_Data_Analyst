@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: oc_raw
+    database: OC_RAW
+    schema: PUBLIC
+    tables:
+      - name: students
+        description: Jeu pédagogique OC ; les USER_ID sont fictifs selon l'auteur du projet.
+      - name: POPULATION
+        description: Estimations INSEE au 1er janvier 2024, par région, sexe et âge.
