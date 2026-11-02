@@ -4,8 +4,9 @@ Ce tableau de bord Power BI compare l'accès à l'eau potable, la mortalité li�
 
 ## Livrables
 
-- `Atitso_William_2_Dashboard_092026.pbix` : tableau de bord avec trois vues et données intégrées.
-- `Atitso_William_1_presentation_092026.pptx` : démarche et résultats.
+- [Aperçu du tableau de bord (PDF)](Dashboard_P10_apercu.pdf) : les trois vues, consultables directement sur GitHub.
+- [Tableau de bord Power BI](Atitso_William_2_Dashboard_092026.pbix) : fichier interactif avec données intégrées, à ouvrir dans Power BI Desktop.
+- [Présentation](Atitso_William_1_presentation_092026.pptx) : démarche et résultats.
 - `DAN-P10-donnees/` : CSV sources et dictionnaire de données.
 
 ## Données et méthode
