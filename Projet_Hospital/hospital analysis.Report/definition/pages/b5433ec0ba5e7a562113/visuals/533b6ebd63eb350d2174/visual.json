@@ -145,7 +145,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 10 Procedures By Average Base Cost'"
+                  "Value": "'Top 10 Procedures by Average Base Cost'"
                 }
               }
             }

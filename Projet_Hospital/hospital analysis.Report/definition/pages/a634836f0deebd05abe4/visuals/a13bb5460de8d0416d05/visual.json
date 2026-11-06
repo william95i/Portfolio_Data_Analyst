@@ -71,8 +71,8 @@
                 }
               },
               "queryRef": "Sum(Requête1.unique_patients)",
-              "nativeQueryRef": "Number Of Patients",
-              "displayName": "Number Of Patients"
+              "nativeQueryRef": "Distinct Inpatient Patients",
+              "displayName": "Distinct Inpatient Patients"
             }
           ]
         }
@@ -252,7 +252,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -300,7 +300,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Number Of Patients Admitted By Quarter'"
+                  "Value": "'Distinct Inpatient Patients by Quarter'"
                 }
               }
             }

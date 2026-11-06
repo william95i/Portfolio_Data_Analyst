@@ -24,7 +24,7 @@ Sur la première page, on peut suivre les visites année par année, comparer le
 
 Entre 2011 et 2021, les données comptent **27 671 visites pour 974 patients**. Le pic se situe en **2014, avec 3 885 visites**. Après plusieurs années moins chargées, l’activité remonte à **3 530 visites en 2021**. Les visites ambulatoires sont les plus fréquentes : elles représentent **près de 45 %** des visites. Presque toutes les visites durent 24 heures ou moins.
 
-J’ai également regardé les retours à l’hôpital. **29 patients** ont eu un nouveau séjour hospitalier (`inpatient`) dans les **30 jours suivant la fin d’un séjour précédent du même type**. Le classement des patients par nombre de séjours répétés compte, lui, tous les séjours hospitaliers supplémentaires sur la période, **sans limite de 30 jours**.
+J’ai également regardé les retours à l’hôpital. Parmi les **153 patients** ayant eu au moins un séjour hospitalier (`inpatient`), **29** ont eu un nouveau séjour dans les **30 jours suivant la fin d’un séjour précédent du même type**, soit **19 %**. Le classement des patients par nombre de séjours répétés compte, lui, tous les séjours hospitaliers supplémentaires sur la période, **sans limite de 30 jours**.
 
 Sur la deuxième page, je compare les procédures les plus courantes, celles dont le coût de base moyen est le plus élevé et le coût moyen des visites selon l’assureur. Une visite dite **« sans couverture »** a une valeur `Payer_Coverage` égale à zéro : cela ne veut pas forcément dire que le patient n’a pas d’assurance. Le taux de couverture affiché par type de visite correspond au **montant total payé par les assureurs divisé par le coût total des visites**. Les montants sont en dollars américains.
 

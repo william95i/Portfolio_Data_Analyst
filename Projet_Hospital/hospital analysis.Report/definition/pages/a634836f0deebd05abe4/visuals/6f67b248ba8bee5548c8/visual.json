@@ -33,7 +33,7 @@
               },
               "queryRef": "Min(hospital_db encounters.Patient)",
               "nativeQueryRef": "Nombre de Patient",
-              "displayName": "Number Of Patients"
+              "displayName": "Number of Patients"
             }
           ]
         }

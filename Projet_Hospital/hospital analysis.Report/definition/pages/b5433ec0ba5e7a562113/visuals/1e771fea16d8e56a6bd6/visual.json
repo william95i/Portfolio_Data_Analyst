@@ -221,7 +221,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Insurance Coverage Rate By EncounterClass'"
+                  "Value": "'Insurance Coverage Rate by Encounter Class'"
                 }
               }
             },

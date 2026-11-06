@@ -28,7 +28,7 @@
               },
               "queryRef": "Mesures.Part des visites sans couverture (%)",
               "nativeQueryRef": "Visits Without Cover (%)",
-              "displayName": "Visits Without Cover (%)"
+              "displayName": "Visits Without Coverage (%)"
             }
           ]
         }

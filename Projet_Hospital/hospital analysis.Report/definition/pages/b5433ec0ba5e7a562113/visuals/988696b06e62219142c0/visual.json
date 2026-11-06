@@ -28,7 +28,7 @@
               },
               "queryRef": "Mesures.Visites sans couverture",
               "nativeQueryRef": "Number of Visits Without Cover",
-              "displayName": "Number of Visits Without Cover"
+              "displayName": "Visits Without Coverage"
             }
           ]
         }

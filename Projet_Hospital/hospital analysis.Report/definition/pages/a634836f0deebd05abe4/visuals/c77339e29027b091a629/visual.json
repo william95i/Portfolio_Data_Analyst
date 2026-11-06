@@ -158,7 +158,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Percentage of Visits By EncounterClass'"
+                  "Value": "'Visits by Encounter Class (%)'"
                 }
               }
             }

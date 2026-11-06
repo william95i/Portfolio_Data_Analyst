@@ -52,7 +52,7 @@
               },
               "queryRef": "Sum(hospital_db encounters.Total_Claim_Cost)",
               "nativeQueryRef": "Average Total Claim Cost By Payer",
-              "displayName": "Average Total Claim Cost By Payer",
+              "displayName": "Average Total Claim Cost by Payer",
               "format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00"
             }
           ]
@@ -239,7 +239,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Average Total Claim Cost By Payer'"
+                  "Value": "'Average Total Claim Cost by Payer'"
                 }
               }
             },

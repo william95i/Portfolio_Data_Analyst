@@ -23,10 +23,10 @@
                       "Entity": "Report Measures"
                     }
                   },
-                  "Property": "Readmitted Patients"
+                  "Property": "Readmission KPI"
                 }
               },
-              "queryRef": "Mesures.Readmitted Patients",
+              "queryRef": "Report Measures.Readmission KPI",
               "nativeQueryRef": "Patients Readmitted Within 30 Days",
               "displayName": "Patients Readmitted Within 30 Days"
             }
@@ -43,7 +43,7 @@
                     "Entity": "Report Measures"
                   }
                 },
-                "Property": "Readmitted Patients"
+                "Property": "Readmission KPI"
               }
             },
             "direction": "Descending"

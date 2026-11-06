@@ -28,7 +28,7 @@
               },
               "queryRef": "Mesures.Nombre de visites",
               "nativeQueryRef": "Number Of Visits",
-              "displayName": "Number Of Visits",
+              "displayName": "Number of Visits",
               "format": "#,0"
             }
           ]

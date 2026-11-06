@@ -353,7 +353,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Hospital Visits Number Per Year'"
+                  "Value": "'Hospital Visits by Year'"
                 }
               }
             },

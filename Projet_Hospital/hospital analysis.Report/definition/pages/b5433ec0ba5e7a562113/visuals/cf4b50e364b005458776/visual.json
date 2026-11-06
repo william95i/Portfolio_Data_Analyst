@@ -28,7 +28,7 @@
               },
               "queryRef": "Mesures.Coût de base moyen des procédures",
               "nativeQueryRef": "Procedures Average Base Cost",
-              "displayName": "Procedures Average Base Cost",
+              "displayName": "Average Procedure Base Cost",
               "format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00"
             }
           ]
