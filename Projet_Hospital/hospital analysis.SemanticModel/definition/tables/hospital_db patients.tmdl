@@ -1,0 +1,194 @@
+table 'hospital_db patients'
+	lineageTag: dfff61b9-34fb-4a08-946f-59f8501c3d33
+
+	column Id
+		dataType: string
+		lineageTag: 057b401f-789d-4525-a1f0-ff6ba9ee2285
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIRTHDATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5980a6c7-28f1-4b06-816c-912170b308ca
+		summarizeBy: none
+		sourceColumn: BIRTHDATE
+
+		variation Variation
+			isDefault
+			relationship: d4089da8-d5b3-4558-9b2b-813eb2683760
+			defaultHierarchy: LocalDateTable_8f9068d9-d931-4367-be4f-80023460e084.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DEATHDATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 5d36a54c-c77d-4ae5-ab1d-347676c3b96f
+		summarizeBy: none
+		sourceColumn: DEATHDATE
+
+		variation Variation
+			isDefault
+			relationship: 123a39c3-c2ad-41a4-aece-684f246af188
+			defaultHierarchy: LocalDateTable_bb32a8e9-4591-494e-ada5-a71d3f838691.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column PREFIX
+		dataType: string
+		lineageTag: 7292eac0-e2c1-4fe7-8a63-871f4b424cbe
+		summarizeBy: none
+		sourceColumn: PREFIX
+
+		annotation SummarizationSetBy = Automatic
+
+	column FIRST
+		dataType: string
+		lineageTag: 018bccff-3c3c-46e6-adc7-d8f07724c27e
+		summarizeBy: none
+		sourceColumn: FIRST
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAST
+		dataType: string
+		lineageTag: ad1d249e-bdac-4422-9473-203ec4d6bc05
+		summarizeBy: none
+		sourceColumn: LAST
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUFFIX
+		dataType: string
+		lineageTag: 0992d203-9ed4-48c4-902b-3ca787337c11
+		summarizeBy: none
+		sourceColumn: SUFFIX
+
+		annotation SummarizationSetBy = Automatic
+
+	column MAIDEN
+		dataType: string
+		lineageTag: 3a41585b-9c9a-4a1b-b629-8332eb74cb76
+		summarizeBy: none
+		sourceColumn: MAIDEN
+
+		annotation SummarizationSetBy = Automatic
+
+	column MARITAL
+		dataType: string
+		lineageTag: f695db21-f972-4711-a26f-8582c580442e
+		summarizeBy: none
+		sourceColumn: MARITAL
+
+		annotation SummarizationSetBy = Automatic
+
+	column RACE
+		dataType: string
+		lineageTag: e047ccda-1dfc-41be-8fea-fae672328e23
+		summarizeBy: none
+		sourceColumn: RACE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ETHNICITY
+		dataType: string
+		lineageTag: 3605ce50-f09e-4eaa-b876-0d03621e7b9f
+		summarizeBy: none
+		sourceColumn: ETHNICITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column GENDER
+		dataType: string
+		lineageTag: f9489e3b-a758-4e8c-acf2-ca22da8cd9cf
+		summarizeBy: none
+		sourceColumn: GENDER
+
+		annotation SummarizationSetBy = Automatic
+
+	column BIRTHPLACE
+		dataType: string
+		lineageTag: 2a22d0ec-88ab-4414-a573-3d32fe1e5ae7
+		summarizeBy: none
+		sourceColumn: BIRTHPLACE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADDRESS
+		dataType: string
+		lineageTag: 1cf3faf8-aa07-40ac-b4ff-cf52e4cfd3c4
+		summarizeBy: none
+		sourceColumn: ADDRESS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CITY
+		dataType: string
+		lineageTag: a3d74594-c009-4668-aa88-c2f7d00268d6
+		summarizeBy: none
+		sourceColumn: CITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE
+		dataType: string
+		lineageTag: 618d4eee-1765-4cd8-a540-23ea13f4fb62
+		summarizeBy: none
+		sourceColumn: STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column COUNTY
+		dataType: string
+		lineageTag: 20605ba0-e1cc-49db-9607-10d3be02088c
+		summarizeBy: none
+		sourceColumn: COUNTY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZIP
+		dataType: string
+		lineageTag: c6ccfc44-9e5e-4f0a-a54c-5cbedeeeefa5
+		summarizeBy: none
+		sourceColumn: ZIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column LAT
+		dataType: double
+		lineageTag: 7bb2806e-119a-494d-a4bc-561f3b0d2308
+		summarizeBy: sum
+		sourceColumn: LAT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LON
+		dataType: double
+		lineageTag: 695b7133-126a-47ce-9f28-51e11d7854f9
+		summarizeBy: sum
+		sourceColumn: LON
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'hospital_db patients' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true]),
+				    hospital_db_patients = Source{[Schema="hospital_db",Item="patients"]}[Data]
+				in
+				    hospital_db_patients
+
+	annotation PBI_ResultType = Table
+

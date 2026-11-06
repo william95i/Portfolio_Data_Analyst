@@ -1,0 +1,40 @@
+table 'Inpatient Patients by Quarter'
+	lineageTag: 1ff702f7-75de-4810-98e9-5ae0b1276166
+
+	column admission_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 99d0d341-0908-4a76-bedc-b3297eaa7c5d
+		summarizeBy: none
+		sourceColumn: admission_year
+
+		annotation SummarizationSetBy = User
+
+	column admission_quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 06532d13-4ed9-4618-9fa3-f2d7cd252f5f
+		summarizeBy: none
+		sourceColumn: admission_quarter
+
+		annotation SummarizationSetBy = User
+
+	column unique_patients
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ec7ac44-e260-4da2-8878-3885e9fd8bcc
+		summarizeBy: sum
+		sourceColumn: unique_patients
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Inpatient Patients by Quarter' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true, Query="SELECT#(lf)    YEAR(`Start`) AS admission_year,#(lf)    QUARTER(`Start`) AS admission_quarter,#(lf)    COUNT(DISTINCT Patient) AS unique_patients#(lf)FROM hospital_db.encounters#(lf)WHERE EncounterClass = 'inpatient'#(lf)  AND `Start` IS NOT NULL#(lf)GROUP BY YEAR(`Start`), QUARTER(`Start`)#(lf)ORDER BY admission_year, admission_quarter;#(lf)"])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

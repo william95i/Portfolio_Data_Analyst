@@ -1,0 +1,136 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 158.63274791375648,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 407.60575823756591,
+            "y": 43.734893668165455
+          },
+          "nodeIndex": "hospital_db encounters",
+          "nodeLineageTag": "8a3e7769-5de1-4b2d-8cad-c4d4e4c9eebf",
+          "size": {
+            "height": 536.36363636363637,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 60.921029555462468,
+            "y": 333.69856382455
+          },
+          "nodeIndex": "hospital_db organizations",
+          "nodeLineageTag": "fbe24b98-d373-4af4-90fd-a22820086625",
+          "size": {
+            "height": 274.31818181818181,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1297.0908937283375,
+            "y": 0
+          },
+          "nodeIndex": "hospital_db patients",
+          "nodeLineageTag": "dfff61b9-34fb-4a08-946f-59f8501c3d33",
+          "size": {
+            "height": 600,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "hospital_db payers",
+          "nodeLineageTag": "9a44c152-f957-409f-9260-6e80d1d2357b",
+          "size": {
+            "height": 261.63636363636363,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 818.58573710119242,
+            "y": 0
+          },
+          "nodeIndex": "hospital_db procedures",
+          "nodeLineageTag": "59eb4c04-919d-4961-a82c-745cf1f57edd",
+          "size": {
+            "height": 331.2272727272728,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 674.1818028192464,
+            "y": 440.34560866436175
+          },
+          "nodeIndex": "Years",
+          "nodeLineageTag": "4c9024a0-880c-4412-a573-830dc5731e58",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1049.1818028192467,
+            "y": 501.84560866436163
+          },
+          "nodeIndex": "Inpatient Patients by Quarter",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1550.553544714124,
+            "y": 516.6356756193095
+          },
+          "nodeIndex": "Top 10 Repeat Inpatient Stays",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1617.454530091974,
+            "y": 168.7546995734526
+          },
+          "nodeIndex": "Report Measures",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Toutes les tables",
+      "zoomValue": 80.800000000000011,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Toutes les tables",
+  "defaultDiagram": "Toutes les tables"
+}

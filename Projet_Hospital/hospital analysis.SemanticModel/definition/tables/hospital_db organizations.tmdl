@@ -1,0 +1,83 @@
+table 'hospital_db organizations'
+	lineageTag: fbe24b98-d373-4af4-90fd-a22820086625
+
+	column id
+		dataType: string
+		lineageTag: f51e537c-48fb-4977-8367-9d0fde803abb
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: 1f8f2531-9d31-4bc6-9dce-fe9731f280b2
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Address
+		dataType: string
+		lineageTag: 22249b5e-0ab2-4c4c-a93c-1381cff10c78
+		summarizeBy: none
+		sourceColumn: Address
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: b4079794-3d92-4742-9377-3b189041645c
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: 3c3c4a8b-2bff-4283-84d9-a205286fc9ad
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column Zip
+		dataType: int64
+		formatString: 0
+		lineageTag: 6207e6db-2f28-4d93-a47c-d82cd757baa2
+		summarizeBy: none
+		sourceColumn: Zip
+
+		annotation SummarizationSetBy = Automatic
+
+	column Lat
+		dataType: double
+		lineageTag: c28c60dd-c1de-4370-99dc-1ad818ae8c5a
+		summarizeBy: none
+		sourceColumn: Lat
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lon
+		dataType: double
+		lineageTag: db7b1784-5a71-483f-9fe6-6428ae992797
+		summarizeBy: none
+		sourceColumn: Lon
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'hospital_db organizations' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true]),
+				    hospital_db_organizations = Source{[Schema="hospital_db",Item="organizations"]}[Data]
+				in
+				    hospital_db_organizations
+
+	annotation PBI_ResultType = Table
+

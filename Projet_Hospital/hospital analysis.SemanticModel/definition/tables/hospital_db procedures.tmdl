@@ -1,0 +1,95 @@
+table 'hospital_db procedures'
+	lineageTag: 59eb4c04-919d-4961-a82c-745cf1f57edd
+
+	column Start
+		dataType: string
+		lineageTag: 583e3f30-da0e-4cca-96d0-9fa13acaaf2c
+		summarizeBy: none
+		sourceColumn: Start
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stop
+		dataType: string
+		lineageTag: 3e2bf77f-e66d-4cb6-ba99-17f5c173683b
+		summarizeBy: none
+		sourceColumn: Stop
+
+		annotation SummarizationSetBy = Automatic
+
+	column Patient
+		dataType: string
+		lineageTag: 73ff330d-ddca-4714-88b3-0143968bb57a
+		summarizeBy: none
+		sourceColumn: Patient
+
+		annotation SummarizationSetBy = Automatic
+
+	column Encounter
+		dataType: string
+		lineageTag: 57c5c51f-15c5-4de4-adb1-780ea295b783
+		summarizeBy: none
+		sourceColumn: Encounter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Code
+		dataType: string
+		lineageTag: 0c20478c-fbad-428a-b81f-1466e104e394
+		summarizeBy: none
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 13254b9d-0ad9-4ceb-a0fe-15fc7128e598
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Base_Cost
+		dataType: double
+		lineageTag: 8f6ad534-87e3-4242-a559-c06c663bdf54
+		summarizeBy: sum
+		sourceColumn: Base_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReasonCode
+		dataType: string
+		lineageTag: 51ecc273-2fa8-4170-8f81-52193fdca497
+		summarizeBy: none
+		sourceColumn: ReasonCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReasonDescription
+		dataType: string
+		lineageTag: 6a1f61e9-cb71-4bb0-a2b2-4ece49bd1a69
+		summarizeBy: none
+		sourceColumn: ReasonDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = YEAR('hospital_db procedures'[Start])
+		formatString: 0
+		lineageTag: b336ef30-58dc-4450-aac4-b5d55e44293e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'hospital_db procedures' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true]),
+				    hospital_db_procedures = Source{[Schema="hospital_db",Item="procedures"]}[Data]
+				in
+				    hospital_db_procedures
+
+	annotation PBI_ResultType = Table
+

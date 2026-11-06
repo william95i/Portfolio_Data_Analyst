@@ -1,0 +1,25 @@
+table Years
+	lineageTag: 4c9024a0-880c-4412-a573-830dc5731e58
+
+	column Year
+		formatString: 0
+		lineageTag: d7902413-5f97-4719-a1f7-82d1f883c573
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = User
+
+	partition Years = calculated
+		mode: import
+		source =
+				
+				DISTINCT(
+				    UNION(
+				        SELECTCOLUMNS('hospital_db encounters', "Year", 'hospital_db encounters'[Year]),
+				        SELECTCOLUMNS('Inpatient Patients by Quarter', "Year", 'Inpatient Patients by Quarter'[admission_year])
+				    )
+				)
+
+	annotation PBI_Id = 704bc92f33e54c49a1e4dd3d71299e15
+

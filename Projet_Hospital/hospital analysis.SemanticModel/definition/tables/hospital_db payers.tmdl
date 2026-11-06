@@ -1,0 +1,70 @@
+table 'hospital_db payers'
+	lineageTag: 9a44c152-f957-409f-9260-6e80d1d2357b
+
+	column Id
+		dataType: string
+		lineageTag: 0e2ee4e9-a646-4b53-b5cb-e14be008e4f9
+		summarizeBy: none
+		sourceColumn: Id
+
+		annotation SummarizationSetBy = Automatic
+
+	column NAME
+		dataType: string
+		lineageTag: e1564b44-60e1-4295-a991-f70b8c765dbe
+		summarizeBy: none
+		sourceColumn: NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column ADDRESS
+		dataType: string
+		lineageTag: 3b800453-4e4a-445e-936a-537f5c14bcdd
+		summarizeBy: none
+		sourceColumn: ADDRESS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CITY
+		dataType: string
+		lineageTag: 4e5ebde1-8ef3-4ae5-8d5b-3fef833c71df
+		summarizeBy: none
+		sourceColumn: CITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE_HEADQUARTERED
+		dataType: string
+		lineageTag: 7bd7b894-4f3c-4afd-adca-c0f05bbf1035
+		summarizeBy: none
+		sourceColumn: STATE_HEADQUARTERED
+
+		annotation SummarizationSetBy = Automatic
+
+	column ZIP
+		dataType: string
+		lineageTag: 86030a8d-7ee2-40ce-8010-3884d88b01bc
+		summarizeBy: none
+		sourceColumn: ZIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column PHONE
+		dataType: string
+		lineageTag: 202d29e5-20d7-4283-ae2f-1434b1e0920d
+		summarizeBy: none
+		sourceColumn: PHONE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'hospital_db payers' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true]),
+				    hospital_db_payers = Source{[Schema="hospital_db",Item="payers"]}[Data]
+				in
+				    hospital_db_payers
+
+	annotation PBI_ResultType = Table
+

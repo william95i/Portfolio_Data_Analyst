@@ -1,0 +1,59 @@
+relationship a5bf033a-4d7b-43c8-87a1-6696f0b06317
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'hospital_db encounters'.Start
+	toColumn: LocalDateTable_01d53f8e-c63e-4a21-ad81-a7381f3ccce7.Date
+
+relationship 1370ccd1-d184-4895-859b-ddc3b3be2050
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'hospital_db encounters'.Stop
+	toColumn: LocalDateTable_6d19e70a-a192-46f6-a650-a115fd115331.Date
+
+relationship d4089da8-d5b3-4558-9b2b-813eb2683760
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'hospital_db patients'.BIRTHDATE
+	toColumn: LocalDateTable_8f9068d9-d931-4367-be4f-80023460e084.Date
+
+relationship 123a39c3-c2ad-41a4-aece-684f246af188
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'hospital_db patients'.DEATHDATE
+	toColumn: LocalDateTable_bb32a8e9-4591-494e-ada5-a71d3f838691.Date
+
+relationship 70c8a1ba-caaa-461d-a7aa-200afca4147c
+	fromColumn: 'hospital_db encounters'.Organization
+	toColumn: 'hospital_db organizations'.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship ed025c3a-4d79-4f2c-94dc-dff6dd71e6ff
+	fromColumn: 'hospital_db encounters'.Patient
+	toColumn: 'hospital_db patients'.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship eb921a4d-1e6f-405a-ab48-b50e21a89614
+	fromColumn: 'hospital_db encounters'.Payer
+	toColumn: 'hospital_db payers'.Id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 18ac9122-55d0-4734-9ca7-9480a827015e
+	fromColumn: 'hospital_db procedures'.Encounter
+	toColumn: 'hospital_db encounters'.id
+
+	annotation PBI_IsFromSource = FS
+
+relationship 271e31be-e28f-1a0d-403e-3ad9ccc28976
+	fromColumn: 'hospital_db encounters'.Year
+	toColumn: Years.Year
+
+relationship 390f9286-2a77-0735-bed6-98787ef7755b
+	fromColumn: 'Inpatient Patients by Quarter'.admission_year
+	toColumn: Years.Year
+
+relationship e88cc42b-e877-435d-b024-7c4a5383fee8
+	isActive: false
+	fromColumn: 'hospital_db procedures'.Patient
+	toColumn: 'hospital_db patients'.Id
+
+	annotation PBI_IsFromSource = FS
+

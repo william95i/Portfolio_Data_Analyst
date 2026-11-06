@@ -1,0 +1,148 @@
+/// Table de présentation des mesures du rapport hospitalier.
+table 'Report Measures'
+	lineageTag: da60b1d8-87f3-4ba3-9542-1372269f33e7
+
+	/// Nombre total de visites dans le contexte de filtre.
+	measure 'Number Of Visits' = COUNTROWS('hospital_db encounters')
+		formatString: #,0
+		lineageTag: 6a496b82-74a4-4fdd-8e9f-482e2c6fe012
+
+	/// Coût total de réclamation moyen par visite dans le contexte de filtre.
+	measure 'Average Cost By Visits' = AVERAGE('hospital_db encounters'[Total_Claim_Cost])
+		formatString: #,0.00
+		lineageTag: 8379400c-8175-4ba4-814e-a2e4dcf768e5
+
+	/// Nombre de visites pour lesquelles la couverture payeur vaut zéro.
+	measure 'Visits Without Cover' = COALESCE(CALCULATE([Number Of Visits], 'hospital_db encounters'[Payer_Coverage] = 0), 0)
+		formatString: #,0
+		lineageTag: 9709e355-7806-43f5-82a3-741bc35bbc76
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	/// Part des visites dont la couverture payeur vaut zéro parmi toutes les visites du contexte de filtre.
+	measure 'Visits Without Cover (%)' = DIVIDE([Visits Without Cover], [Number Of Visits])
+		formatString: 0.0%
+		lineageTag: 5ea00841-fd8b-45d1-a05d-f1fbeaf3f913
+
+	/// Nombre de procédures réalisées, une ligne de la table procédures par réalisation.
+	measure 'Number Of Procedures' = COUNTROWS('hospital_db procedures')
+		formatString: #,0
+		lineageTag: 4f8298e0-c4ce-4f0f-9715-903fedfd6b39
+
+	/// Coût de base moyen des procédures dans le contexte de filtre.
+	measure 'Procedures Base Costs' = AVERAGE('hospital_db procedures'[Base_Cost])
+		formatString: #,0.00
+		lineageTag: 450901e5-b52c-4336-8bbf-92b5c1942c57
+
+	/// Variation en pourcentage du nombre de visites par rapport à l'année précédente. Utiliser Year sur l'axe du visuel.
+	measure 'Year over Year Visits Evolution (%)' =
+			VAR Annee = SELECTEDVALUE('hospital_db encounters'[Year])
+			VAR VisitesActuelles = COUNTROWS('hospital_db encounters')
+			VAR VisitesPrecedentes =
+			    CALCULATE(
+			        COUNTROWS('hospital_db encounters'),
+			        FILTER(
+			            ALL('hospital_db encounters'[Year]),
+			            'hospital_db encounters'[Year] = Annee - 1
+			        )
+			    )
+			RETURN
+			IF(
+			    ISBLANK(Annee),
+			    BLANK(),
+			    DIVIDE(VisitesActuelles - VisitesPrecedentes, VisitesPrecedentes)
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 6ea835d9-dfc7-43e1-a79e-e29d385a7690
+
+	measure 'Readmitted Patients' =
+			
+			VAR Readmissions =
+			    FILTER(
+			        'hospital_db encounters',
+			        VAR CurrentPatient = 'hospital_db encounters'[Patient]
+			        VAR CurrentStart = 'hospital_db encounters'[Start]
+			        VAR CurrentId = 'hospital_db encounters'[id]
+			        VAR PreviousStop =
+			            MAXX(
+			                TOPN(
+			                    1,
+			                    FILTER(
+			                        ALL('hospital_db encounters'),
+			                        'hospital_db encounters'[Patient] = CurrentPatient
+			                            && 'hospital_db encounters'[EncounterClass] = "inpatient"
+			                            && NOT ISBLANK('hospital_db encounters'[Start])
+			                            && NOT ISBLANK('hospital_db encounters'[Stop])
+			                            && (
+			                                'hospital_db encounters'[Start] < CurrentStart
+			                                || (
+			                                    'hospital_db encounters'[Start] = CurrentStart
+			                                    && 'hospital_db encounters'[id] < CurrentId
+			                                )
+			                            )
+			                    ),
+			                    'hospital_db encounters'[Start], DESC,
+			                    'hospital_db encounters'[id], DESC
+			                ),
+			                'hospital_db encounters'[Stop]
+			            )
+			        RETURN
+			            'hospital_db encounters'[EncounterClass] = "inpatient"
+			                && NOT ISBLANK(CurrentPatient)
+			                && NOT ISBLANK(CurrentStart)
+			                && NOT ISBLANK('hospital_db encounters'[Stop])
+			                && NOT ISBLANK(PreviousStop)
+			                && CurrentStart >= PreviousStop
+			                && CurrentStart <= PreviousStop + 30
+			    )
+			RETURN
+			    COUNTROWS(
+			        DISTINCT(
+			            SELECTCOLUMNS(
+			                Readmissions,
+			                "Patient", 'hospital_db encounters'[Patient]
+			            )
+			        )
+			    )
+		formatString: 0
+		lineageTag: b1357d56-58e0-4fd4-8d64-9f435ac64a3e
+
+	measure 'Patients by age group' =
+			
+			DISTINCTCOUNT('hospital_db encounters'[Patient])
+		formatString: 0
+		lineageTag: a8450a75-56dc-409b-8f06-b3f4e585fdce
+
+	measure 'Insurance coverage rate' =
+			
+			DIVIDE(
+			    SUM('hospital_db encounters'[Payer_Coverage]),
+			    SUM('hospital_db encounters'[Total_Claim_Cost])
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: d1451b0e-7853-4e2e-af0f-188ee720cba5
+
+	measure 'Visits over 24h (%)' =
+			
+			DIVIDE(
+			    SUM('hospital_db encounters'[Over 24 h]),
+			    [Number Of Visits]
+			)
+		lineageTag: f8e5c4ee-9b9d-4f07-8066-94f88d8f9f95
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Technique
+		isHidden
+		formatString: 0
+		lineageTag: 0a5acf15-2330-4410-9c1f-72377b70bca3
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Technique]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Report Measures' = calculated
+		mode: import
+		source = ROW("Technique", 1)
+

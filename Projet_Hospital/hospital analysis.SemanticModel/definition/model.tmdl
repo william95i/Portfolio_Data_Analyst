@@ -1,0 +1,32 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["hospital_db encounters","hospital_db organizations","hospital_db patients","hospital_db payers","hospital_db procedures","Inpatient Patients by Quarter","Top 10 Repeat Inpatient Stays"]
+
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+
+ref table 'hospital_db encounters'
+ref table DateTableTemplate_af6e7ace-7b1d-401d-91da-48a0c220570f
+ref table LocalDateTable_01d53f8e-c63e-4a21-ad81-a7381f3ccce7
+ref table LocalDateTable_6d19e70a-a192-46f6-a650-a115fd115331
+ref table 'hospital_db organizations'
+ref table 'hospital_db patients'
+ref table LocalDateTable_8f9068d9-d931-4367-be4f-80023460e084
+ref table LocalDateTable_bb32a8e9-4591-494e-ada5-a71d3f838691
+ref table 'hospital_db payers'
+ref table 'hospital_db procedures'
+ref table 'Report Measures'
+ref table 'Inpatient Patients by Quarter'
+ref table Years
+ref table 'Top 10 Repeat Inpatient Stays'
+
+ref cultureInfo fr-FR
+

@@ -1,0 +1,207 @@
+table 'hospital_db encounters'
+	lineageTag: 8a3e7769-5de1-4b2d-8cad-c4d4e4c9eebf
+
+	column id
+		dataType: string
+		lineageTag: bd18e59b-a536-401d-adf9-241c4a501b12
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column Start
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dedcb936-7c6f-4d9c-98ad-aa95b1774082
+		summarizeBy: none
+		sourceColumn: Start
+
+		variation Variation
+			isDefault
+			relationship: a5bf033a-4d7b-43c8-87a1-6696f0b06317
+			defaultHierarchy: LocalDateTable_01d53f8e-c63e-4a21-ad81-a7381f3ccce7.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Stop
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9707e53f-6118-4977-9911-121442d64084
+		summarizeBy: none
+		sourceColumn: Stop
+
+		variation Variation
+			isDefault
+			relationship: 1370ccd1-d184-4895-859b-ddc3b3be2050
+			defaultHierarchy: LocalDateTable_6d19e70a-a192-46f6-a650-a115fd115331.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Patient
+		dataType: string
+		lineageTag: 2f664017-a0fa-4c9a-9471-d0b5dbe7b286
+		summarizeBy: none
+		sourceColumn: Patient
+
+		annotation SummarizationSetBy = Automatic
+
+	column Organization
+		dataType: string
+		lineageTag: 00a21d16-9d6b-430c-916b-c87c4e3602d7
+		summarizeBy: none
+		sourceColumn: Organization
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payer
+		dataType: string
+		lineageTag: 8929f0fa-399a-422d-8a0a-3cc3af142767
+		summarizeBy: none
+		sourceColumn: Payer
+
+		annotation SummarizationSetBy = Automatic
+
+	column EncounterClass
+		dataType: string
+		lineageTag: a913626b-ad41-4be8-a144-f47e8ee37fdc
+		summarizeBy: none
+		sourceColumn: EncounterClass
+
+		annotation SummarizationSetBy = Automatic
+
+	column Code
+		dataType: int64
+		formatString: 0
+		lineageTag: 2da27e3f-0273-4474-9a5f-811273b8c6be
+		summarizeBy: count
+		sourceColumn: Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 59ef6ddd-53ae-4f13-be1c-71bfabd257af
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Base_Encounter_Cost
+		dataType: double
+		lineageTag: 3a9513fb-a5bd-44ea-9a8f-f868476b3db8
+		summarizeBy: sum
+		sourceColumn: Base_Encounter_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Total_Claim_Cost
+		dataType: double
+		lineageTag: 79ffcf63-163a-4d74-b8b8-430f4956915e
+		summarizeBy: sum
+		sourceColumn: Total_Claim_Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Payer_Coverage
+		dataType: double
+		lineageTag: 41381944-4b26-4557-8882-f8b03d3ef3ea
+		summarizeBy: sum
+		sourceColumn: Payer_Coverage
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ReasonCode
+		dataType: string
+		lineageTag: c3b4e47b-6ea3-4a5f-ba5d-4d05839345c6
+		summarizeBy: none
+		sourceColumn: ReasonCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ReasonDescription
+		dataType: string
+		lineageTag: 448839af-b85f-47c4-a3d8-afb18c37e194
+		summarizeBy: none
+		sourceColumn: ReasonDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = YEAR('hospital_db encounters'[Start])
+		formatString: 0
+		lineageTag: 1aee68fc-607f-454b-b3d8-497fca6cb350
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Indicateur 1 si la visite dure plus de 24 heures, 0 sinon. Les dates manquantes donnent une valeur vide.
+	column 'Over 24 h' =
+			VAR Debut = 'hospital_db encounters'[Start]
+			VAR Fin = 'hospital_db encounters'[Stop]
+			RETURN
+			IF(
+			    ISBLANK(Debut) || ISBLANK(Fin),
+			    BLANK(),
+			    IF(DATEDIFF(Debut, Fin, SECOND) > 86400, 1, 0)
+			)
+		dataType: int64
+		formatString: 0
+		lineageTag: 98c62e3e-6130-434f-ac4b-319746713edd
+		summarizeBy: sum
+
+	column 'Age at visit' =
+			
+			VAR BirthDate = RELATED('hospital_db patients'[BIRTHDATE])
+			VAR VisitDate = 'hospital_db encounters'[Start]
+			RETURN
+			    IF(
+			        ISBLANK(BirthDate) || ISBLANK(VisitDate) || VisitDate < BirthDate,
+			        BLANK(),
+			        YEAR(VisitDate) - YEAR(BirthDate)
+			            - IF(
+			                MONTH(VisitDate) * 100 + DAY(VisitDate)
+			                    < MONTH(BirthDate) * 100 + DAY(BirthDate),
+			                1,
+			                0
+			            )
+			    )
+		formatString: 0
+		lineageTag: f416c41e-2bdc-4601-92e5-03091bd75ee4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Age group at visit' =
+			
+			VAR Age = 'hospital_db encounters'[Age at visit]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(Age), BLANK(),
+			        Age < 35, "19–34 years",
+			        Age < 50, "35–49 years",
+			        Age < 65, "50–64 years",
+			        Age < 80, "65–79 years",
+			        "80+ years"
+			    )
+		lineageTag: d8011795-d545-47a4-aead-8886afbf475a
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'hospital_db encounters' = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true]),
+				    hospital_db_encounters = Source{[Schema="hospital_db",Item="encounters"]}[Data]
+				in
+				    hospital_db_encounters
+
+	annotation PBI_ResultType = Table
+
