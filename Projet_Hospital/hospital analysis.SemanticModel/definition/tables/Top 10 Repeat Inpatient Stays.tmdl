@@ -9,22 +9,33 @@ table 'Top 10 Repeat Inpatient Stays'
 
 		annotation SummarizationSetBy = Automatic
 
-	column readmission_count
+	column repeat_stay_count
 		dataType: int64
 		formatString: 0
 		lineageTag: 995f8e9e-6c81-4922-b149-101a59937c44
 		summarizeBy: none
-		sourceColumn: readmission_count
+		sourceColumn: repeat_stay_count
 
 		annotation SummarizationSetBy = User
+
+	column 'Patient ID short' =
+			
+			LEFT('Top 10 Repeat Inpatient Stays'[patient_id], 8)
+			& "…"
+			& RIGHT('Top 10 Repeat Inpatient Stays'[patient_id], 4)
+		lineageTag: 050d21cd-a5d1-4ce5-a3ab-03459cd27c59
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'Top 10 Repeat Inpatient Stays' = m
 		mode: import
 		source =
 				let
-				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true, Query="WITH inpatient_encounters AS (#(lf)    SELECT#(lf)        Patient,#(lf)        `Start`,#(lf)        LAG(Stop) OVER (#(lf)            PARTITION BY Patient#(lf)            ORDER BY `Start`, id#(lf)        ) AS previous_stop#(lf)    FROM hospital_db.encounters#(lf)    WHERE EncounterClass = 'inpatient'#(lf)      AND `Start` IS NOT NULL#(lf)      AND Stop IS NOT NULL#(lf)      AND `Start` < '2022-01-01'#(lf))#(lf)SELECT#(lf)    Patient AS patient_id,#(lf)    COUNT(*) AS readmission_count#(lf)FROM inpatient_encounters#(lf)WHERE previous_stop IS NOT NULL#(lf)  AND `Start` >= previous_stop#(lf)GROUP BY Patient#(lf)ORDER BY readmission_count DESC, patient_id#(lf)LIMIT 10;"])
+				    Source = MySQL.Database("localhost:3307", "hospital_db", [ReturnSingleDatabase=true, Query="WITH inpatient_encounters AS (#(lf)    SELECT#(lf)        Patient,#(lf)        `Start`,#(lf)        LAG(Stop) OVER (#(lf)            PARTITION BY Patient#(lf)            ORDER BY `Start`, id#(lf)        ) AS previous_stop#(lf)    FROM hospital_db.encounters#(lf)    WHERE EncounterClass = 'inpatient'#(lf)      AND `Start` IS NOT NULL#(lf)      AND Stop IS NOT NULL#(lf)      AND `Start` < '2022-01-01'#(lf))#(lf)SELECT#(lf)    Patient AS patient_id,#(lf)    COUNT(*) AS readmission_count#(lf)FROM inpatient_encounters#(lf)WHERE previous_stop IS NOT NULL#(lf)  AND `Start` >= previous_stop#(lf)GROUP BY Patient#(lf)ORDER BY readmission_count DESC, patient_id#(lf)LIMIT 10;"]),
+				    #"Colonnes renommées" = Table.RenameColumns(Source,{{"readmission_count", "repeat_stay_count"}})
 				in
-				    Source
+				    #"Colonnes renommées"
 
 	annotation PBI_ResultType = Table
 

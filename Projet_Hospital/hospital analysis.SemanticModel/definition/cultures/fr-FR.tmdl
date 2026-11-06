@@ -403,16 +403,6 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.476
 			          }
-			        },
-			        {
-			          "stay": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -4238,16 +4228,6 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.476
 			          }
-			        },
-			        {
-			          "stay": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
 			        }
 			      ]
 			    },
@@ -4808,7 +4788,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure": {
+			    "report_measure": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures"
@@ -4817,13 +4797,119 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "mesure": {
+			          "report measure": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "measure": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "information measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "commentary measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "description measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "presentation measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statement measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "forecast measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "account measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "article measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "narrative measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "paper measure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
 			          }
 			        }
 			      ]
 			    },
-			    "mesure.technique": {
+			    "report_measure.technique": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -4902,7 +4988,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.number_of_visits": {
+			    "report_measure.number_of_visits": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -4968,7 +5054,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.average_cost_by_visits": {
+			    "report_measure.average_cost_by_visits": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -5106,7 +5192,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.visits_without_cover": {
+			    "report_measure.visits_without_cover": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -5238,7 +5324,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.visits_without_cover1": {
+			    "report_measure.visits_without_cover1": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -5369,7 +5455,7 @@ cultureInfo fr-FR
 			        "%"
 			      ]
 			    },
-			    "mesure.number_of_procedures": {
+			    "report_measure.number_of_procedures": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -5455,7 +5541,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.procedures_base_costs": {
+			    "report_measure.procedures_base_costs": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -5613,7 +5699,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.year_over_year_visits_evolution": {
+			    "report_measure.year_over_year_visits_evolution": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -5772,7 +5858,7 @@ cultureInfo fr-FR
 			        "%"
 			      ]
 			    },
-			    "requête_1": {
+			    "inpatient_patient_by_quarter": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Inpatient Patients by Quarter"
@@ -5781,20 +5867,29 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "requête 1": {
+			          "inpatient patient by quarter": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Requête1": {
-			            "Type": "Noun",
+			          "inpatient patient": {
 			            "State": "Generated",
-			            "Weight": 0.99
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "inpatient patient by qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.686
 			          }
 			        }
 			      ]
 			    },
-			    "requête_1.admission_year": {
+			    "inpatient_patient_by_quarter.admission_year": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Inpatient Patients by Quarter",
@@ -5837,7 +5932,7 @@ cultureInfo fr-FR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "requête_1.admission_quarter": {
+			    "inpatient_patient_by_quarter.admission_quarter": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Inpatient Patients by Quarter",
@@ -5870,7 +5965,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "requête_1.unique_patient": {
+			    "inpatient_patient_by_quarter.unique_patient": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Inpatient Patients by Quarter",
@@ -5946,7 +6041,7 @@ cultureInfo fr-FR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "mesure.readmitted_patients": {
+			    "report_measure.readmitted_patients": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -5978,7 +6073,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "requête_3": {
+			    "top_10_repeat_inpatient_stay": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Top 10 Repeat Inpatient Stays"
@@ -5987,20 +6082,137 @@ cultureInfo fr-FR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "requête 3": {
+			          "top 10 repeat inpatient stay": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Requête3": {
-			            "Type": "Noun",
+			          "stay": {
 			            "State": "Generated",
-			            "Weight": 0.99
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "inpatient stay": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "repeat inpatient stay": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "10 repeat inpatient stay": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best 10 repeat inpatient stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "first 10 repeat inpatient stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "leading 10 repeat inpatient stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "maximum 10 repeat inpatient stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "peak 10 repeat inpatient stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "upper 10 repeat inpatient stay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "top 10 repeat inpatient stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "10 repeat inpatient stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "repeat inpatient stopover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "top 10 repeat inpatient break": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
 			          }
 			        }
 			      ]
 			    },
-			    "requête_3.patient_id": {
+			    "top_10_repeat_inpatient_stay.patient_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Top 10 Repeat Inpatient Stays",
@@ -6063,29 +6275,45 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "requête_3.readmission_count": {
+			    "top_10_repeat_inpatient_stay.repeat_stay_count": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Top 10 Repeat Inpatient Stays",
-			          "ConceptualProperty": "readmission_count"
+			          "ConceptualProperty": "repeat_stay_count"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "readmission count": {
+			          "repeat stay count": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "readmission_count": {
+			          "repeat_stay_count": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "readmission amount": {
+			          "stay count": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "repeat stay amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "stay amount": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6340,7 +6568,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.patients_by_age_group": {
+			    "report_measure.patients_by_age_group": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -6416,7 +6644,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.insurance_coverage_rate": {
+			    "report_measure.insurance_coverage_rate": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -6544,7 +6772,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "mesure.visits_over_24h": {
+			    "report_measure.visits_over_24h": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -6671,6 +6899,39 @@ cultureInfo fr-FR
 			    }
 			  },
 			  "Relationships": {
+			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "hospital_db patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			          }
+			        },
+			        "hospital_db_patient.birthdate.mois": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "hospital_db_patient.birthdate.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises"
+			        }
+			      ]
+			    },
 			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db patients"
@@ -7030,7 +7291,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises"
+			          "ID": "hiérarchie_de_dates_have_moises1"
 			        }
 			      ]
 			    },
@@ -7393,7 +7654,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises1"
+			          "ID": "hiérarchie_de_dates_have_moises2"
 			        }
 			      ]
 			    },
@@ -7496,15 +7757,15 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "requête_1_has_year": {
+			    "inpatient_patient_by_quarter_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Inpatient Patients by Quarter"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "requête_1": {
+			        "inpatient_patient_by_quarter": {
 			          "Target": {
-			            "Entity": "requête_1"
+			            "Entity": "inpatient_patient_by_quarter"
 			          }
 			        },
 			        "year": {
@@ -7524,7 +7785,7 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "requête_1"
+			              "Role": "inpatient_patient_by_quarter"
 			            },
 			            "Object": {
 			              "Role": "year"
@@ -7532,7 +7793,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "requête_1_have_years"
+			          "ID": "inpatient_patient_by_quarter_have_years"
 			        },
 			        {
 			          "Attribute": {
@@ -7540,12 +7801,12 @@ cultureInfo fr-FR
 			              "Role": "year"
 			            },
 			            "Object": {
-			              "Role": "requête_1"
+			              "Role": "inpatient_patient_by_quarter"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "years_have_requête_1"
+			          "ID": "years_have_inpatient_patient_by_quarter"
 			        }
 			      ]
 			    },
@@ -7813,7 +8074,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_visits_over_24h": {
+			    "hospital_db_encounter_has_report_measure_visits_over_24h": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -7824,9 +8085,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.visits_over_24h": {
+			        "report_measure.visits_over_24h": {
 			          "Target": {
-			            "Entity": "mesure.visits_over_24h"
+			            "Entity": "report_measure.visits_over_24h"
 			          }
 			        }
 			      },
@@ -7837,7 +8098,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.visits_over_24h"
+			              "Role": "report_measure.visits_over_24h"
 			            }
 			          },
 			          "State": "Generated",
@@ -7846,7 +8107,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_insurance_coverage_rate": {
+			    "hospital_db_encounter_has_report_measure_insurance_coverage_rate": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -7857,9 +8118,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.insurance_coverage_rate": {
+			        "report_measure.insurance_coverage_rate": {
 			          "Target": {
-			            "Entity": "mesure.insurance_coverage_rate"
+			            "Entity": "report_measure.insurance_coverage_rate"
 			          }
 			        }
 			      },
@@ -7870,7 +8131,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.insurance_coverage_rate"
+			              "Role": "report_measure.insurance_coverage_rate"
 			            }
 			          },
 			          "State": "Generated",
@@ -7879,7 +8140,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_patients_by_age_group": {
+			    "hospital_db_encounter_has_report_measure_patients_by_age_group": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -7890,9 +8151,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.patients_by_age_group": {
+			        "report_measure.patients_by_age_group": {
 			          "Target": {
-			            "Entity": "mesure.patients_by_age_group"
+			            "Entity": "report_measure.patients_by_age_group"
 			          }
 			        }
 			      },
@@ -7903,7 +8164,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.patients_by_age_group"
+			              "Role": "report_measure.patients_by_age_group"
 			            }
 			          },
 			          "State": "Generated",
@@ -8005,20 +8266,20 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "requête_3_has_readmission_count": {
+			    "top_10_repeat_inpatient_stay_has_repeat_stay_count": {
 			      "Binding": {
 			        "ConceptualEntity": "Top 10 Repeat Inpatient Stays"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "requête_3": {
+			        "top_10_repeat_inpatient_stay": {
 			          "Target": {
-			            "Entity": "requête_3"
+			            "Entity": "top_10_repeat_inpatient_stay"
 			          }
 			        },
-			        "requête_3.readmission_count": {
+			        "top_10_repeat_inpatient_stay.repeat_stay_count": {
 			          "Target": {
-			            "Entity": "requête_3.readmission_count"
+			            "Entity": "top_10_repeat_inpatient_stay.repeat_stay_count"
 			          }
 			        }
 			      },
@@ -8026,32 +8287,32 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "requête_3"
+			              "Role": "top_10_repeat_inpatient_stay"
 			            },
 			            "Object": {
-			              "Role": "requête_3.readmission_count"
+			              "Role": "top_10_repeat_inpatient_stay.repeat_stay_count"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "requête_3_have_readmission_counts"
+			          "ID": "top_10_repeat_inpatient_stays_have_repeat_stay_counts"
 			        }
 			      ]
 			    },
-			    "requête_3_has_patient_id": {
+			    "top_10_repeat_inpatient_stay_has_patient_id": {
 			      "Binding": {
 			        "ConceptualEntity": "Top 10 Repeat Inpatient Stays"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "requête_3": {
+			        "top_10_repeat_inpatient_stay": {
 			          "Target": {
-			            "Entity": "requête_3"
+			            "Entity": "top_10_repeat_inpatient_stay"
 			          }
 			        },
-			        "requête_3.patient_id": {
+			        "top_10_repeat_inpatient_stay.patient_id": {
 			          "Target": {
-			            "Entity": "requête_3.patient_id"
+			            "Entity": "top_10_repeat_inpatient_stay.patient_id"
 			          }
 			        }
 			      },
@@ -8059,19 +8320,19 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "requête_3"
+			              "Role": "top_10_repeat_inpatient_stay"
 			            },
 			            "Object": {
-			              "Role": "requête_3.patient_id"
+			              "Role": "top_10_repeat_inpatient_stay.patient_id"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "requête_3_have_patient_ids"
+			          "ID": "top_10_repeat_inpatient_stays_have_patient_ids"
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_readmitted_patients": {
+			    "hospital_db_encounter_has_report_measure_readmitted_patients": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -8082,9 +8343,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.readmitted_patients": {
+			        "report_measure.readmitted_patients": {
 			          "Target": {
-			            "Entity": "mesure.readmitted_patients"
+			            "Entity": "report_measure.readmitted_patients"
 			          }
 			        }
 			      },
@@ -8095,7 +8356,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.readmitted_patients"
+			              "Role": "report_measure.readmitted_patients"
 			            }
 			          },
 			          "State": "Generated",
@@ -8137,20 +8398,20 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "requête_1_has_unique_patient": {
+			    "inpatient_patient_by_quarter_has_unique_patient": {
 			      "Binding": {
 			        "ConceptualEntity": "Inpatient Patients by Quarter"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "requête_1": {
+			        "inpatient_patient_by_quarter": {
 			          "Target": {
-			            "Entity": "requête_1"
+			            "Entity": "inpatient_patient_by_quarter"
 			          }
 			        },
-			        "requête_1.unique_patient": {
+			        "inpatient_patient_by_quarter.unique_patient": {
 			          "Target": {
-			            "Entity": "requête_1.unique_patient"
+			            "Entity": "inpatient_patient_by_quarter.unique_patient"
 			          }
 			        }
 			      },
@@ -8158,32 +8419,32 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "requête_1"
+			              "Role": "inpatient_patient_by_quarter"
 			            },
 			            "Object": {
-			              "Role": "requête_1.unique_patient"
+			              "Role": "inpatient_patient_by_quarter.unique_patient"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "requête_1_have_unique_patients"
+			          "ID": "inpatient_patient_by_quarter_have_unique_patients"
 			        }
 			      ]
 			    },
-			    "requête_1_has_admission_quarter": {
+			    "inpatient_patient_by_quarter_has_admission_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "Inpatient Patients by Quarter"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "requête_1": {
+			        "inpatient_patient_by_quarter": {
 			          "Target": {
-			            "Entity": "requête_1"
+			            "Entity": "inpatient_patient_by_quarter"
 			          }
 			        },
-			        "requête_1.admission_quarter": {
+			        "inpatient_patient_by_quarter.admission_quarter": {
 			          "Target": {
-			            "Entity": "requête_1.admission_quarter"
+			            "Entity": "inpatient_patient_by_quarter.admission_quarter"
 			          }
 			        }
 			      },
@@ -8191,19 +8452,19 @@ cultureInfo fr-FR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "requête_1"
+			              "Role": "inpatient_patient_by_quarter"
 			            },
 			            "Object": {
-			              "Role": "requête_1.admission_quarter"
+			              "Role": "inpatient_patient_by_quarter.admission_quarter"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "requête_1_have_admission_quarters"
+			          "ID": "inpatient_patient_by_quarter_have_admission_quarters"
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_year_over_year_visits_evolution": {
+			    "hospital_db_encounter_has_report_measure_year_over_year_visits_evolution": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -8214,9 +8475,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.year_over_year_visits_evolution": {
+			        "report_measure.year_over_year_visits_evolution": {
 			          "Target": {
-			            "Entity": "mesure.year_over_year_visits_evolution"
+			            "Entity": "report_measure.year_over_year_visits_evolution"
 			          }
 			        }
 			      },
@@ -8227,7 +8488,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.year_over_year_visits_evolution"
+			              "Role": "report_measure.year_over_year_visits_evolution"
 			            }
 			          },
 			          "State": "Generated",
@@ -8236,7 +8497,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_procedure_has_mesure_procedures_base_costs": {
+			    "hospital_db_procedure_has_report_measure_procedures_base_costs": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db procedures"
 			      },
@@ -8247,9 +8508,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_procedure"
 			          }
 			        },
-			        "mesure.procedures_base_costs": {
+			        "report_measure.procedures_base_costs": {
 			          "Target": {
-			            "Entity": "mesure.procedures_base_costs"
+			            "Entity": "report_measure.procedures_base_costs"
 			          }
 			        }
 			      },
@@ -8260,7 +8521,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_procedure"
 			            },
 			            "Object": {
-			              "Role": "mesure.procedures_base_costs"
+			              "Role": "report_measure.procedures_base_costs"
 			            }
 			          },
 			          "State": "Generated",
@@ -8287,7 +8548,7 @@ cultureInfo fr-FR
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "mesure.procedures_base_costs"
+			              "Role": "report_measure.procedures_base_costs"
 			            }
 			          },
 			          "State": "Generated",
@@ -8296,7 +8557,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_procedure_has_mesure_number_of_procedures": {
+			    "hospital_db_procedure_has_report_measure_number_of_procedures": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db procedures"
 			      },
@@ -8307,9 +8568,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_procedure"
 			          }
 			        },
-			        "mesure.number_of_procedures": {
+			        "report_measure.number_of_procedures": {
 			          "Target": {
-			            "Entity": "mesure.number_of_procedures"
+			            "Entity": "report_measure.number_of_procedures"
 			          }
 			        }
 			      },
@@ -8320,7 +8581,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_procedure"
 			            },
 			            "Object": {
-			              "Role": "mesure.number_of_procedures"
+			              "Role": "report_measure.number_of_procedures"
 			            }
 			          },
 			          "State": "Generated",
@@ -8329,7 +8590,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_visits_without_cover1": {
+			    "hospital_db_encounter_has_report_measure_visits_without_cover1": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -8340,9 +8601,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.visits_without_cover1": {
+			        "report_measure.visits_without_cover1": {
 			          "Target": {
-			            "Entity": "mesure.visits_without_cover1"
+			            "Entity": "report_measure.visits_without_cover1"
 			          }
 			        }
 			      },
@@ -8353,7 +8614,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.visits_without_cover1"
+			              "Role": "report_measure.visits_without_cover1"
 			            }
 			          },
 			          "State": "Generated",
@@ -8362,7 +8623,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_visits_without_cover": {
+			    "hospital_db_encounter_has_report_measure_visits_without_cover": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -8373,9 +8634,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.visits_without_cover": {
+			        "report_measure.visits_without_cover": {
 			          "Target": {
-			            "Entity": "mesure.visits_without_cover"
+			            "Entity": "report_measure.visits_without_cover"
 			          }
 			        }
 			      },
@@ -8386,7 +8647,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.visits_without_cover"
+			              "Role": "report_measure.visits_without_cover"
 			            }
 			          },
 			          "State": "Generated",
@@ -8395,7 +8656,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_average_cost_by_visits": {
+			    "hospital_db_encounter_has_report_measure_average_cost_by_visits": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -8406,9 +8667,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.average_cost_by_visits": {
+			        "report_measure.average_cost_by_visits": {
 			          "Target": {
-			            "Entity": "mesure.average_cost_by_visits"
+			            "Entity": "report_measure.average_cost_by_visits"
 			          }
 			        }
 			      },
@@ -8419,7 +8680,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.average_cost_by_visits"
+			              "Role": "report_measure.average_cost_by_visits"
 			            }
 			          },
 			          "State": "Generated",
@@ -8446,7 +8707,7 @@ cultureInfo fr-FR
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "mesure.average_cost_by_visits"
+			              "Role": "report_measure.average_cost_by_visits"
 			            }
 			          },
 			          "State": "Generated",
@@ -8455,7 +8716,7 @@ cultureInfo fr-FR
 			        }
 			      ]
 			    },
-			    "hospital_db_encounter_has_mesure_number_of_visits": {
+			    "hospital_db_encounter_has_report_measure_number_of_visits": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db encounters"
 			      },
@@ -8466,9 +8727,9 @@ cultureInfo fr-FR
 			            "Entity": "hospital_db_encounter"
 			          }
 			        },
-			        "mesure.number_of_visits": {
+			        "report_measure.number_of_visits": {
 			          "Target": {
-			            "Entity": "mesure.number_of_visits"
+			            "Entity": "report_measure.number_of_visits"
 			          }
 			        }
 			      },
@@ -8479,7 +8740,7 @@ cultureInfo fr-FR
 			              "Role": "hospital_db_encounter"
 			            },
 			            "Object": {
-			              "Role": "mesure.number_of_visits"
+			              "Role": "report_measure.number_of_visits"
 			            }
 			          },
 			          "State": "Generated",
@@ -8518,39 +8779,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "hospital_db_encounters_have_over_24_h"
-			        }
-			      ]
-			    },
-			    "hospital_db_encounter_has_entity_24_h_or_less": {
-			      "Binding": {
-			        "ConceptualEntity": "hospital_db encounters"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hospital_db_encounter": {
-			          "Target": {
-			            "Entity": "hospital_db_encounter"
-			          }
-			        },
-			        "hospital_db_encounter.entity_24_h_or_less": {
-			          "Target": {
-			            "Entity": "hospital_db_encounter.entity_24_h_or_less"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hospital_db_encounter"
-			            },
-			            "Object": {
-			              "Role": "hospital_db_encounter.entity_24_h_or_less"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hospital_db_encounters_have_24_h_or_less"
 			        }
 			      ]
 			    },
@@ -11017,39 +11245,6 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "hospital_db_patients_are_born_on_birthdates"
-			        }
-			      ]
-			    },
-			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "hospital_db patients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			          }
-			        },
-			        "hospital_db_patient.birthdate.mois": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "hospital_db_patient.birthdate.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises2"
 			        }
 			      ]
 			    },

@@ -23,11 +23,11 @@
                       "Entity": "Top 10 Repeat Inpatient Stays"
                     }
                   },
-                  "Property": "patient_id"
+                  "Property": "Patient ID short"
                 }
               },
-              "queryRef": "Requête3.patient_id",
-              "nativeQueryRef": "patient_id",
+              "queryRef": "Top 10 Repeat Inpatient Stays.Patient ID short",
+              "nativeQueryRef": "Patient ID short",
               "active": true
             }
           ]
@@ -44,15 +44,15 @@
                           "Entity": "Top 10 Repeat Inpatient Stays"
                         }
                       },
-                      "Property": "readmission_count"
+                      "Property": "repeat_stay_count"
                     }
                   },
                   "Function": 0
                 }
               },
               "queryRef": "Sum(Requête3.readmission_count)",
-              "nativeQueryRef": "Readmission_count",
-              "displayName": "Readmission_count"
+              "nativeQueryRef": "Repeat_stay_count",
+              "displayName": "Repeat_stay_count"
             }
           ]
         }
@@ -69,7 +69,7 @@
                         "Entity": "Top 10 Repeat Inpatient Stays"
                       }
                     },
-                    "Property": "readmission_count"
+                    "Property": "repeat_stay_count"
                   }
                 },
                 "Function": 0
@@ -99,7 +99,7 @@
                                   "Entity": "Top 10 Repeat Inpatient Stays"
                                 }
                               },
-                              "Property": "readmission_count"
+                              "Property": "repeat_stay_count"
                             }
                           },
                           "Function": 0
