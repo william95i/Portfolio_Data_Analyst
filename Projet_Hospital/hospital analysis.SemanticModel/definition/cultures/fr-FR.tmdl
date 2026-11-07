@@ -5313,7 +5313,7 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
-			          "Number of Visits Without Cover": {
+			          "Visits Without Coverage": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5447,6 +5447,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "Visits Without Coverage (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -5679,16 +5689,6 @@ cultureInfo fr-FR
 			        },
 			        {
 			          "Average Procedure Base Cost": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Procedures Average Base Cost": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -6059,16 +6059,6 @@ cultureInfo fr-FR
 			          "patients": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "Patients Readmitted Within 30 Days": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6895,6 +6885,27 @@ cultureInfo fr-FR
 			      "Units": [
 			        "percentage",
 			        "%"
+			      ]
+			    },
+			    "report_measures.readmission_kpi": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Report Measures",
+			          "ConceptualProperty": "Readmission KPI"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Patients Readmitted Within 30 Days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
 			      ]
 			    }
 			  },

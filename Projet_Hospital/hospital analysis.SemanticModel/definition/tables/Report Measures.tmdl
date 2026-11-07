@@ -107,24 +107,6 @@ table 'Report Measures'
 		formatString: 0
 		lineageTag: b1357d56-58e0-4fd4-8d64-9f435ac64a3e
 
-	/// Nombre de patients réadmis sous 30 jours rapporté aux patients ayant eu un séjour inpatient.
-	measure 'Readmission KPI' =
-			VAR Readmitted = [Readmitted Patients]
-			VAR Inpatients =
-			    CALCULATE(
-			        DISTINCTCOUNT('hospital_db encounters'[Patient]),
-			        'hospital_db encounters'[EncounterClass] = "inpatient"
-			    )
-			RETURN
-			    IF(
-			        Inpatients = 0,
-			        BLANK(),
-			        FORMAT(Readmitted, "0")
-			            & " / " & FORMAT(Inpatients, "0")
-			            & " (" & FORMAT(DIVIDE(Readmitted, Inpatients), "0.0%") & ")"
-			    )
-		lineageTag: 888cca7d-3d98-40d0-a889-4df8920fb9b6
-
 	measure 'Patients by age group' =
 			
 			DISTINCTCOUNT('hospital_db encounters'[Patient])
@@ -149,6 +131,24 @@ table 'Report Measures'
 		lineageTag: f8e5c4ee-9b9d-4f07-8066-94f88d8f9f95
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Nombre de patients réadmis sous 30 jours rapporté aux patients ayant eu un séjour inpatient.
+	measure 'Readmission KPI' =
+			VAR Readmitted = [Readmitted Patients]
+			VAR Inpatients =
+			    CALCULATE(
+			        DISTINCTCOUNT('hospital_db encounters'[Patient]),
+			        'hospital_db encounters'[EncounterClass] = "inpatient"
+			    )
+			RETURN
+			    IF(
+			        Inpatients = 0,
+			        BLANK(),
+			        FORMAT(Readmitted, "0")
+			            & " / " & FORMAT(Inpatients, "0")
+			            & " (" & FORMAT(DIVIDE(Readmitted, Inpatients), "0.0%") & ")"
+			    )
+		lineageTag: 888cca7d-3d98-40d0-a889-4df8920fb9b6
 
 	column Technique
 		isHidden
