@@ -1,6 +1,6 @@
 # Portfolio Data Analyst
 
-Après un BTS MCO, je me suis réorienté vers l'analyse de données. Ce portfolio rassemble mes projets OpenClassrooms : préparation des données, analyses et présentation des résultats.
+Après un BTS MCO, je me suis réorienté vers l'analyse de données. Ce portfolio rassemble mes projets OpenClassrooms et un projet personnel : préparation des données, analyses et présentation des résultats.
 
 ## Projets à découvrir
 
@@ -15,6 +15,10 @@ Après un BTS MCO, je me suis réorienté vers l'analyse de données. Ce portfol
 | [Détection de faux billets](Projets_OC/P12/README.md) | Peut-on repérer des contrefaçons à partir des mesures d'un billet ? | Python, classification, script de prédiction |
 
 Ces sept projets ont été validés dans le cadre de ma formation.
+
+## Projet personnel
+
+- [Analyse des visites hospitalières](Projet_Hospital/README.md) : analyse des visites, des patients, des procédures et de la couverture des coûts à partir d'un jeu de données synthétique. **MySQL, SQL et Power BI.**
 
 ## Projet en attente d'évaluation
 
