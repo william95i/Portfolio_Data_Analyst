@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "533b6ebd63eb350d2174",
   "position": {
-    "x": 1.7363344051446945,
+    "x": 0,
     "y": 616.39871382636647,
     "z": 3000,
     "height": 463.60128617363341,
-    "width": 1166.8167202572347,
+    "width": 1147.7170418006431,
     "tabOrder": 3000
   },
   "visual": {
@@ -90,6 +90,19 @@
             }
           }
         }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -146,6 +159,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Top 10 Procedures by Average Base Cost'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
                 }
               }
             }
