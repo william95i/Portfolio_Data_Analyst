@@ -51,8 +51,8 @@
                 }
               },
               "queryRef": "Sum(hospital_db encounters.Total_Claim_Cost)",
-              "nativeQueryRef": "Average Total Claim Cost By Payer",
-              "displayName": "Average Total Claim Cost by Payer",
+              "nativeQueryRef": "Average Total Claim Cost",
+              "displayName": "Average Total Claim Cost",
               "format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00"
             }
           ]

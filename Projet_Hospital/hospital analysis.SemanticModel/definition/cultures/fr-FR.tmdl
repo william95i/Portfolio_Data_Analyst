@@ -6887,7 +6887,7 @@ cultureInfo fr-FR
 			        "%"
 			      ]
 			    },
-			    "report_measures.readmission_kpi": {
+			    "report_measure.readmission_KPI": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Report Measures",
@@ -6896,6 +6896,17 @@ cultureInfo fr-FR
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "readmission KPI": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "KPI": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
 			        {
 			          "Patients Readmitted Within 30 Days": {
 			            "State": "Suggested",
@@ -6907,108 +6918,137 @@ cultureInfo fr-FR
 			          }
 			        }
 			      ]
+			    },
+			    "top_10_repeat_inpatient_stay.patient_ID_short": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Top 10 Repeat Inpatient Stays",
+			          "ConceptualProperty": "Patient ID short"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "patient ID short": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "ID short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "patient identification short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "patient identity short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "patient identifier short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identification short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "patient credential short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "credential short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "small": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "little": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_mois": {
-			      "Binding": {
-			        "ConceptualEntity": "hospital_db patients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			          }
-			        },
-			        "hospital_db_patient.birthdate.mois": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.mois"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "hospital_db_patient.birthdate.mois"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises"
-			        }
-			      ]
-			    },
-			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "hospital_db patients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			          }
-			        },
-			        "hospital_db_patient.birthdate.trimestre": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "hospital_db_patient.birthdate.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres"
-			        }
-			      ]
-			    },
-			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_année": {
-			      "Binding": {
-			        "ConceptualEntity": "hospital_db patients"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			          }
-			        },
-			        "hospital_db_patient.birthdate.année": {
-			          "Target": {
-			            "Entity": "hospital_db_patient.birthdate.année"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
-			            },
-			            "Object": {
-			              "Role": "hospital_db_patient.birthdate.année"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années"
-			        }
-			      ]
-			    },
 			    "hospital_db_patient_birthdate_has_hiérarchie_de_date": {
 			      "Binding": {
 			        "ConceptualEntity": "hospital_db patients"
@@ -7302,7 +7342,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises1"
+			          "ID": "hiérarchie_de_dates_have_moises"
 			        }
 			      ]
 			    },
@@ -7335,7 +7375,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres1"
+			          "ID": "hiérarchie_de_dates_have_trimestres"
 			        }
 			      ]
 			    },
@@ -7368,7 +7408,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années1"
+			          "ID": "hiérarchie_de_dates_have_années"
 			        }
 			      ]
 			    },
@@ -7665,7 +7705,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_moises2"
+			          "ID": "hiérarchie_de_dates_have_moises1"
 			        }
 			      ]
 			    },
@@ -7698,7 +7738,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_trimestres2"
+			          "ID": "hiérarchie_de_dates_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -7731,7 +7771,7 @@ cultureInfo fr-FR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hiérarchie_de_dates_have_années2"
+			          "ID": "hiérarchie_de_dates_have_années1"
 			        }
 			      ]
 			    },
@@ -8082,6 +8122,72 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "hospital_db_organizations_have_hospital_db_encounters"
+			        }
+			      ]
+			    },
+			    "top_10_repeat_inpatient_stay_has_patient_ID_short": {
+			      "Binding": {
+			        "ConceptualEntity": "Top 10 Repeat Inpatient Stays"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "top_10_repeat_inpatient_stay": {
+			          "Target": {
+			            "Entity": "top_10_repeat_inpatient_stay"
+			          }
+			        },
+			        "top_10_repeat_inpatient_stay.patient_ID_short": {
+			          "Target": {
+			            "Entity": "top_10_repeat_inpatient_stay.patient_ID_short"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "top_10_repeat_inpatient_stay"
+			            },
+			            "Object": {
+			              "Role": "top_10_repeat_inpatient_stay.patient_ID_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "top_10_repeat_inpatient_stays_have_patient_ID_shorts"
+			        }
+			      ]
+			    },
+			    "hospital_db_encounter_has_report_measure_readmission_KPI": {
+			      "Binding": {
+			        "ConceptualEntity": "hospital_db encounters"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hospital_db_encounter": {
+			          "Target": {
+			            "Entity": "hospital_db_encounter"
+			          }
+			        },
+			        "report_measure.readmission_KPI": {
+			          "Target": {
+			            "Entity": "report_measure.readmission_KPI"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hospital_db_encounter"
+			            },
+			            "Object": {
+			              "Role": "report_measure.readmission_KPI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hospital_db_encounters_have_readmission_KPI"
 			        }
 			      ]
 			    },
@@ -11256,6 +11362,105 @@ cultureInfo fr-FR
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "hospital_db_patients_are_born_on_birthdates"
+			        }
+			      ]
+			    },
+			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_année": {
+			      "Binding": {
+			        "ConceptualEntity": "hospital_db patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			          }
+			        },
+			        "hospital_db_patient.birthdate.année": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.année"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "hospital_db_patient.birthdate.année"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_années2"
+			        }
+			      ]
+			    },
+			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "hospital_db patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			          }
+			        },
+			        "hospital_db_patient.birthdate.trimestre": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "hospital_db_patient.birthdate.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "hospital_db_patient_birthdate_hiérarchie_de_date_has_hospital_db_patient_birthdate_mois": {
+			      "Binding": {
+			        "ConceptualEntity": "hospital_db patients"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hospital_db_patient.birthdate.hiérarchie_de_date": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			          }
+			        },
+			        "hospital_db_patient.birthdate.mois": {
+			          "Target": {
+			            "Entity": "hospital_db_patient.birthdate.mois"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hospital_db_patient.birthdate.hiérarchie_de_date"
+			            },
+			            "Object": {
+			              "Role": "hospital_db_patient.birthdate.mois"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hiérarchie_de_dates_have_moises2"
 			        }
 			      ]
 			    },
