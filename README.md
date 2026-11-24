@@ -19,12 +19,9 @@ Après un BTS MCO, je me suis réorienté vers l'analyse de données. Ce portfol
 | [Accès à l'eau dans le monde](<Projets_OC/P10 Power BI/README.md>) | Comment comparer les situations entre pays et régions ? | Power BI, Power Query, tableau de bord |
 | [Marchés d'exportation de volaille](<Projets_OC/P11 Analyse marché/README.md>) | Quels pays méritent une étude commerciale plus approfondie ? | Python, ACP, classification, score exploratoire |
 | [Alimentation dans le monde](Projets_OC/P4/README.md) | Que révèlent les données sur la sous-nutrition et la disponibilité alimentaire ? | Python, Pandas, visualisation |
+| [Amélioration de Bottleneck et portfolio](Projets_OC/P13/README.md) | Comment fiabiliser le rapprochement des données produit et présenter mes projets ? | Python, Pandas, contrôles qualité, veille |
 
-Le P5, le P8, le P12 et les quatre projets ci-dessus ont été validés dans le cadre de ma formation.
-
-## Projet en attente d'évaluation
-
-- [Amélioration de Bottleneck et portfolio](Projets_OC/P13/README.md) : reprise du projet P6, contrôles de qualité, puis organisation de mes projets et de ma veille. **Évaluation à venir.**
+Le P5, le P8, le P12 et les cinq projets ci-dessus ont été validés dans le cadre de ma formation.
 
 ## Veille métier et technologique
 
